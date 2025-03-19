@@ -1,0 +1,55 @@
+@extends('layouts.layoutMaster')
+
+@section('content')
+
+ 			<div class="page-header">
+							<h1>
+							@lang('messages.{{names}}_{{names}}')
+								<small>
+									<i class="ace-icon fa fa-angle-double-right"></i>
+								    {{${{name}}->id}}
+								</small>
+							</h1>
+						</div><!-- /.page-header -->
+						<div class="row">
+							<div class="col-xs-12">
+                	<div class="widget-box">
+												<div class="widget-header">
+													<h4 class="widget-title">   @lang('messages.my_profile')   </h4>
+
+													<span class="widget-toolbar">
+																	<a href="#" data-action="settings" data-toggle="dropdown">
+															<i class="ace-icon fa fa-bars"></i>
+														</a>
+
+														<ul class="dropdown-menu dropdown-menu-right dropdown-light-blue dropdown-caret dropdown-closer">
+														</ul>
+
+														<a href="#" data-action="reload">
+															<i class="ace-icon fa fa-refresh"></i>
+														</a>
+
+                                                        		<a href="#" data-action="fullscreen" class="orange2">
+														<i class="ace-icon fa fa-expand"></i>
+													</a>
+
+														<a href="#" data-action="collapse">
+															<i class="ace-icon fa fa-chevron-up"></i>
+														</a>
+
+														<a href="#" data-action="close">
+															<i class="ace-icon fa fa-times"></i>
+														</a>
+													</span>
+												</div>
+
+												<div class="widget-body">
+													<div class="widget-main">
+
+
+
+
+                    <form class="form-horizontal" role="form" method="POST" action="/{{names}}/{{${{name}}->id}}"    enctype="multipart/form-data"  >
+                    {!! csrf_field() !!}
+                    {{ method_field('PUT') }}
+

@@ -1,0 +1,4 @@
+
+Route::resource('{{name}}', {{names}}Controller::class);
+Route::get('/remote/{{name}}_data', [{{names}}Controller::class ,'all_data' ]);
+

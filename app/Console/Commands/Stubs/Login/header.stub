@@ -1,0 +1,35 @@
+@php
+    use Illuminate\Support\Facades\Route;
+    $configData = Helper::appClasses();
+    $customizerHidden = 'customizer-hide';
+    $configData = Helper::appClasses();
+@endphp
+@extends('layouts/blankLayout')
+@section('title', __('Login'))
+@section('page-style')
+    <!-- Page -->
+    @vite('resources/assets/vendor/scss/pages/page-auth.scss')
+@endsection
+@section('content')
+    <div class="authentication-wrapper authentication-cover">
+        <!-- Logo -->
+        <a href="{{ url('/') }}" class="app-brand auth-cover-brand">
+            <span class="app-brand-logo demo">@include('_partials.macros', ['height' => {{$height}}, 'width' => {{$width}}, 'withbg' => 'fill: #fff;'])</span>
+            <span class="app-brand-text demo text-heading fw-bold">{{ config('variables.templateName') }}</span>
+        </a>
+        <!-- /Logo -->
+        <div class="authentication-inner row m-0">
+            <!-- /Left Text -->
+            <div class="d-none d-lg-flex col-lg-8 p-0">
+                <div class="auth-cover-bg auth-cover-bg-color d-flex justify-content-center align-items-center">
+                    <img src="{{ asset('assets/images/login.png') }}"
+                        alt="auth-login-cover" class="my-5 auth-illustration"
+
+                        >
+                    <img src="{{ asset('assets/img/illustrations/bg-shape-image-' . $configData['style'] . '.png') }}"
+                        alt="auth-login-cover" class="platform-bg"
+                        data-app-light-img="illustrations/bg-shape-image-light.png"
+                        data-app-dark-img="illustrations/bg-shape-image-dark.png">
+                </div>
+            </div>
+            <!-- /Left Text -->

@@ -1,0 +1,1 @@
+            '{{input}}' => 'required|exists:{{REF_TBL_NAME}},{{REF_COL_NAME}}',

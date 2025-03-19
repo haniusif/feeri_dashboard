@@ -1,0 +1,31 @@
+
+
+
+                    public function show_{{name}}(Request $request)
+                    {
+
+                    if(isset($request->lang)) {
+                        $lang = ($request->lang == 'ar') ? 'ar' : 'en';
+                    }else{
+                        $lang = '{{lang}}';
+                    }
+                        App::setLocale($lang);
+
+
+
+
+                    // check_failure
+                    $conditions = ['{{parm_id}}' => 'required|exists:{{names}},id'] ;
+                    $all_request = $request->all();
+                    $check_failure =  $this->check_failure($all_request,$conditions);
+                    if($check_failure){
+                    return $check_failure;
+                    }
+
+                    ${{parm_id}} =  $request->{{parm_id}};
+                    // check_failure
+                    ${{name}} = {{UC_name}}::select('{{names}}.*')->find(${{parm_id}});
+
+                    $ResponseMessage =  ($lang=='ar') ?  "{{name}} retrieved successfully" : "{{name}} retrieved successfully";
+                    $check_success =  $this->check_success($ResponseMessage,${{name}});
+                    return $check_success;

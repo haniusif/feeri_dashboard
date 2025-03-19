@@ -1,0 +1,6 @@
+
+<td>
+<span class="badge bg-label-{{ (${{name}}->{{colum_name}} == 1) ? __("success") : __("danger") }} ">
+{{ (${{name}}->{{colum_name}} == 1) ? __("YES") : __("NO") }}
+</span>
+</td>

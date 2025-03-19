@@ -1,0 +1,9 @@
+
+//////////////////////////// {{TABLE_NAME}} options  ////////////////////////////
+
+'{{TABLE_NAME}}_save' => 'add new {{singular_TABLE_NAME}}',
+'{{TABLE_NAME}}_update' => 'update  {{singular_TABLE_NAME}} data',
+'{{TABLE_NAME}}_add_new' => 'add new {{singular_TABLE_NAME}}',
+'{{TABLE_NAME}}_show_title' => 'show {{singular_TABLE_NAME}} NO.',
+
+//////////////////////////// {{TABLE_NAME}} colums////////////////////////////

@@ -1,0 +1,62 @@
+Xxxxxxx
+             <ul class="list-unstyled mb-0">
+                                            <li class="d-inline-block mr-2">
+                                                <fieldset>
+                                                    <div class="vs-checkbox-con vs-checkbox-primary">
+                                                        <input type="checkbox" value="false">
+                                                        <span class="vs-checkbox vs-checkbox-sm">
+                                                            <span class="vs-checkbox--check">
+                                                                <i class="vs-icon feather icon-check"></i>
+                                                            </span>
+                                                        </span>
+                                                        <span class="">Small</span>
+                                                    </div>
+                                                </fieldset>
+                                            </li>
+                                            <li class="d-inline-block mr-2">
+                                                <fieldset>
+                                                    <div class="vs-checkbox-con vs-checkbox-primary">
+                                                        <input type="checkbox" value="false">
+                                                        <span class="vs-checkbox">
+                                                            <span class="vs-checkbox--check">
+                                                                <i class="vs-icon feather icon-check"></i>
+                                                            </span>
+                                                        </span>
+                                                        <span class="">Default</span>
+                                                    </div>
+                                                </fieldset>
+                                            </li>
+                                            <li class="d-inline-block mr-2">
+                                                <fieldset>
+                                                    <div class="vs-checkbox-con vs-checkbox-primary">
+                                                        <input type="checkbox" checked="" value="false">
+                                                        <span class="vs-checkbox vs-checkbox-lg">
+                                                            <span class="vs-checkbox--check">
+                                                                <i class="vs-icon feather icon-check"></i>
+                                                            </span>
+                                                        </span>
+                                                        <span class="">Large</span>
+                                                    </div>
+                                                </fieldset>
+                                            </li>
+                                        </ul>
+                             <div class="form-group{{ $errors->has('{{colum_name}}') ? ' has-error' : '' }}">
+                               <label class="col-md-4 control-label ">{{ __('{{names}}_{{colum_name}}') }}</label>
+                            <div class="col-md-6  ">
+                            <select class="form-control "  name="{{colum_name}}" >
+
+                            @foreach(${{models}} as ${{model}})
+                             <option   @selected(old('{{colum_name}}' , ${{name}}->{{colum_name}}) == ${{model}}->id)     value="{{ ${{model}}->id }}" >{{ ${{model}}->{{main_colum_name}} }}</option>
+                             @endforeach
+                            </select>
+
+
+                                @if ($errors->has('{{colum_name}}'))
+                                    <span class="help-block">
+                                        <strong>{{ $errors->first('{{colum_name}}') }}</strong>
+                                    </span>
+                                @endif
+                            </div>
+
+
+                        </div>

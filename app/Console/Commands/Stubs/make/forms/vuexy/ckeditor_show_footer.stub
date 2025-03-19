@@ -1,0 +1,53 @@
+
+
+
+ <div class="form-group">
+                            <div class="col-md-6 col-md-offset-2">
+                                <button type="submit" class="btn btn-primary pull-left">
+                                    <i class="fa fa-btn fa-save"></i>  @lang('messages.{{names}}_update')
+                                </button>
+
+
+                            </div>
+                        </div>
+                    </form>
+
+
+    <ul class="pager">
+                 @if($previous)
+											<li class="previous">
+												<a href="/{{names}}/{{$previous}}"><i class="ace-icon fa fa-angle-double-right"></i> @lang('messages.previous')   </a>
+											</li>
+                @endif
+                @if($next)
+											<li class="next">
+												<a href="/{{names}}/{{$next}}"> @lang('messages.next')   <i class="ace-icon fa fa-angle-double-left"></i> </a>
+											</li>
+                @endif
+	</ul>
+
+
+                </div>
+            </div>
+          
+              </div>
+              </div>
+              </div>
+
+
+
+
+
+
+@stop
+
+
+@push('scripts')
+ 	<script src="/assets/ckeditor/ckeditor.js"></script>
+	<script src="/assets/ckeditor/samples/js/sample.js"></script>
+
+    <script>
+	initSample();
+</script>
+
+@endpush

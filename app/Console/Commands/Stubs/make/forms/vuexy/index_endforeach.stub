@@ -1,0 +1,26 @@
+        </tr>
+    
+     </tfoot>
+                                            </table>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+@stop
+
+
+@push('scripts')
+<script>
+    $('#{{names}}-table').DataTable({
+        scrollX: true,
+        processing: true,
+        serverSide: true,
+        ajax: '/remote/{{names}}_data',
+        columns: [
+        {data: 'action', name: 'action', orderable: false, searchable: false},
+
+        

@@ -1,0 +1,75 @@
+   public function send_otp(Request $request)
+    {
+        if (isset($request->lang)) {
+            $lang = ($request->lang == 'ar') ? 'ar' : 'en';
+        } else {
+            $lang = 'ar';
+        }
+        App::setLocale($lang);
+        $conditions = ['phone_number' => 'required|string|max:20'];
+        $all_request = $request->all();
+        $check_failure = $this->check_failure($all_request, $conditions);
+        if ($check_failure) {
+            return $check_failure;
+        }
+        $user = User::wherePhoneNumber($request->phone_number)->first();
+        //  $random_number = mt_rand(1000, 9999);
+        $random_number = 1234;
+        $now = Carbon::now();
+        $addMinutes = $now->addMinutes(5);
+        if (!$user) {
+            $user = new User();
+            $user->phone_number = $request->phone_number;
+            $user->password = bcrypt($random_number);
+            $user->code_expires_at = $addMinutes;
+            $user->code = $random_number;
+            $user->last_interactive = date("Y-m-d h:i:s");
+            $user->save();
+        }
+        $user = User::wherePhoneNumber($request->phone_number)->first();
+        $user->code_expires_at = $addMinutes;
+        $user->code = $random_number;
+        $user->last_interactive = date("Y-m-d h:i:s");
+        $user->update();
+        //  $Help = new Help();
+        //    $is_send = $Help->send_sms("OTP Code :" .$user->code,$user->phone_number);
+        // $getReasonPhrase = $is_send->getReasonPhrase();
+        $getReasonPhrase = 'OK';
+        if ($getReasonPhrase == 'OK') {
+            $ResponseMessage = "Verification code sent";
+            $check_success = $this->custom_success($ResponseMessage);
+        } else {
+            $ResponseMessage = $is_send->getReasonPhrase();
+            $check_success = $this->custom_error($ResponseMessage);
+        }
+        return $check_success;
+    }
+    public function check_otp(Request $request)
+    {
+        if (isset($request->lang)) {
+            $lang = ($request->lang == 'ar') ? 'ar' : 'en';
+        } else {
+            $lang = 'ar';
+        }
+        App::setLocale($lang);
+        $conditions = ['phone_number' => 'required|string|max:20', 'code' => 'required|string|size:4'];
+        $all_request = $request->all();
+        $check_failure = $this->check_failure($all_request, $conditions);
+        if ($check_failure) {
+            return $check_failure;
+        }
+        $user = User::wherePhoneNumber($request->phone_number)->whereCode($request->code)->first();
+        if (!$user) {
+            $ResponseMessage = "There is an error in the OTP code you entered";
+            $check_success = $this->custom_error($ResponseMessage);
+            return $check_success;
+        }
+        $user->is_verified = 1;
+        $user->last_interactive = date("Y-m-d h:i:s");
+        $user->update();
+        $success['user'] = $user;
+        $success['token'] = $user->createToken('ssc')->accessToken;
+        $ResponseMessage = "welcome";
+        $check_success = $this->check_success($ResponseMessage, $success);
+        return $check_success;
+    }

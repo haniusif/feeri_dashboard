@@ -1,0 +1,31 @@
+
+
+
+           <div class="col-12  mb-3">
+                                                        <div class="form-group row">
+                                                            <div class="col-md-4">
+                                                                <span>{{ __('{{names}}_{{colum_name}}') }}</span>
+                                                            </div>
+                                                            <div class="col-md-8">
+                                                                <div class="position-relative has-icon-left">
+
+                                                                     <select   data-toggle="popover"   data-placement="left"  data-content="{{ __('{{names}}_{{colum_name}}_data-content') }}" data-trigger="hover"  data-original-title="{{ __('{{names}}_{{colum_name}}_data-original-title') }}"  class="form-control {{ $errors->has('{{colum_name}}') ? 'is-invalid' : '' }}"     data-validation-required-message="{{ __('This field is required') }}" name="{{colum_name}}" >
+
+                            @foreach(${{models}} as ${{model}})
+                             <option  @selected(old('{{colum_name}}' ) == ${{model}}->id)   value="{{ ${{model}}->id }}" >{{ ${{model}}->{{main_colum_name}} }}</option>
+                             @endforeach
+                            </select>
+
+                                                                    <div class="form-control-position">
+                                                                        <i class="feather icon-file-minus"></i>
+                                                                    </div>
+
+                                                                    @if ($errors->has('{{colum_name}}'))
+                                                                    <div class="invalid-feedback">
+                                                                    {{ $errors->first('{{colum_name}}') }}
+                                                </div>
+                                                @endif
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>

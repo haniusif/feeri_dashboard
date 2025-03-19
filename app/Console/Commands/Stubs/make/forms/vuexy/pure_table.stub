@@ -1,0 +1,8 @@
+ <th >{{ __('Action') }}</th>
+    </tr>
+     </thead>
+          <tbody>
+          @foreach (${{names}} as $key => ${{name}})
+            <tr>
+            <td>{{ ${{name}}->firstItem + $key + 1 }}</td>
+            

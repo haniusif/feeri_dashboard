@@ -1,0 +1,29 @@
+
+
+
+                    public function delete_{{name}}(Request $request)
+                    {
+
+                    if(isset($request->lang)) {
+                        $lang = ($request->lang == 'ar') ? 'ar' : 'en';
+                    }else{
+                        $lang = '{{lang}}';
+                    }
+                        App::setLocale($lang);
+
+                    // check_failure
+                    $conditions = ['{{parm_id}}' => 'required|exists:{{names}},id'] ;
+                    $all_request = $request->all();
+                    $check_failure =  $this->check_failure($all_request,$conditions);
+                    if($check_failure){
+                    return $check_failure;
+                    }
+                    // check_failure
+                    ${{parm_id}} =  $request->{{parm_id}};
+
+                    ${{name}} = {{UC_name}}::select('{{names}}.*')->find(${{parm_id}});
+                    $delete =  ${{name}}->delete();
+
+                    $ResponseMessage =  ($lang=='ar') ?  "{{name}} deleted successfully" : "{{name}} deleted successfully";
+                    $check_success =  $this->custom_success($ResponseMessage);
+                    return $check_success;

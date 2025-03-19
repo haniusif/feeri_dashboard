@@ -1,0 +1,35 @@
+
+
+
+ <div class="form-group">
+                            <div class="col-md-6 col-md-offset-2">
+                                <button type="submit" class="btn btn-primary pull-left">
+                                    <i class="fa fa-btn fa-save"></i>@lang('messages.{{names}}_save') 
+                                </button>
+
+
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+         
+           </div>
+            </div>
+            </div>
+
+
+
+
+@stop
+
+
+@push('scripts')
+ 	<script src="/assets/ckeditor/ckeditor.js"></script>
+	<script src="/assets/ckeditor/samples/js/sample.js"></script>
+
+    <script>
+	initSample();
+</script>
+
+@endpush

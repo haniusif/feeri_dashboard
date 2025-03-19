@@ -1,0 +1,16 @@
+
+                <TextView
+                    android:id="@+id/{{id}}"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/input_field_height"
+                    android:background="@drawable/rounded_corners_edittext_dark"
+                    android:drawablePadding="15dp"
+                    android:drawableStart="@drawable/ic_email"
+                    android:gravity="start|center_vertical"
+                    android:hint="@string/email_address"
+                    android:inputType="textEmailAddress|textNoSuggestions"
+                    android:paddingEnd="15dp"
+                    android:paddingStart="15dp"
+                    android:textAlignment="viewStart"
+                    android:textColor="@color/textColorSecondary"
+                    android:textColorHint="@color/textColorPrimaryDark"/>

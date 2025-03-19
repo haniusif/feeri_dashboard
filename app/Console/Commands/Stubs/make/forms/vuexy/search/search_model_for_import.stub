@@ -1,0 +1,2 @@
+
+${{names}} = \App\Models\{{app_name}}\{{name}}::get();

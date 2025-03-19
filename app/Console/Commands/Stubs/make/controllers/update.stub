@@ -1,0 +1,8 @@
+}
+
+     public function update(Request $request, $id)
+    {
+
+      ${{name}} = {{UC_name}}::find($id); 
+
+    

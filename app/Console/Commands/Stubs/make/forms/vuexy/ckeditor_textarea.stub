@@ -1,0 +1,15 @@
+
+
+       <div class="form-group{{ $errors->has('{{colum_name}}') ? ' has-error' : '' }}">
+                             <label class="col-md-4 control-label  "> @lang('messages.{{names}}_{{colum_name}}')</label>
+                            <div class="col-md-6  ">
+                                <textarea  class="form-control ckeditor" name="{{colum_name}}" placeholder="@lang('messages.{{names}}_{{colum_name}}')"  >{{ old('{{colum_name}}') }}</textarea>
+                                @if ($errors->has('{{colum_name}}'))
+                                    <span class="help-block">
+                                        <strong>{{ $errors->first('{{colum_name}}') }}</strong>
+                                    </span>
+                                @endif
+                            </div>
+
+
+    </div>

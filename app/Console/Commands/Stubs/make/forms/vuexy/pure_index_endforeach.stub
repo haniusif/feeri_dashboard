@@ -1,0 +1,25 @@
+         <td>
+           <a href="{{ route('{{names}}.show', ${{name}}->id) }}"
+                                                    class="btn btn-success mr-1 mb-1 btn-sm"><i
+                                                        class="ti ti-eye"></i></a>
+            <button value="{{  ${{name}}->id }}" class="btn btn-danger mr-1 mb-1 btn-sm "  onclick="showConfirmation(this)"   ><i class="ti ti-trash"></i></button>
+                                                <form id="destroy-{{name}}_{{  ${{name}}->id }}"
+                                                    action="{{ route('{{names}}.destroy', ${{name}}->id) }}" method="POST"
+                                                    style="display: none;">
+                                                    @method('DELETE')
+                                                    @csrf
+                                                </form>
+           </td>
+        </tr>
+ @endforeach
+   </tbody>
+        <tfoot>
+       <tr><td      colspan="{{colspan}}"  >{{${{names}}->links("pagination::bootstrap-4")}} </td></tr>
+        </tfoot>
+</table>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                   @stop

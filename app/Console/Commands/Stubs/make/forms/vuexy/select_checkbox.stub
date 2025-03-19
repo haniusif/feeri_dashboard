@@ -1,0 +1,55 @@
+
+                             <div class="form-group{{ $errors->has('{{colum_name}}') ? ' has-error' : '' }}">
+                                 <label class="col-md-4 control-label  "> {{ __('{{names}}_{{colum_name}}') }}  </label>
+                            <div class="col-md-6  ">
+
+                             <ul class="list-unstyled mb-0">
+
+                                            <li class="d-inline-block mr-2">
+
+                                                <fieldset>
+                                                 <div class="vs-checkbox-con vs-checkbox-primary">
+                                                        <input type="checkbox"   name="{{colum_name}}" id="select_all"  value="0">
+                                                        <span class="vs-checkbox vs-checkbox-lg" >
+                                                            <span class="vs-checkbox--check">
+                                                                <i class="vs-icon feather icon-check"></i>
+                                                            </span>
+                                                        </span>
+                                                        <span class="">All</span>
+                                                    </div>
+                                                    <table class="table table-bordered">
+                                                    <tr>
+                                                 @foreach(${{models}} as $key =>  ${{model}})
+                                                    <td>
+
+
+                                                    <div class="vs-checkbox-con vs-checkbox-primary">
+                                                        <input type="checkbox"  class="checkbox" name="{{colum_name}}"  value="{{ ${{model}}->id }}">
+                                                        <span class="vs-checkbox vs-checkbox-lg" >
+                                                            <span class="vs-checkbox--check">
+                                                                <i class="vs-icon feather icon-check"></i>
+                                                            </span>
+                                                        </span>
+                                                        <span class="">{{ ${{model}}->{{main_colum_name}} }}</span>
+                                                    </div>
+                                                    </td>
+                                                    @if($key%4==0)
+ </tr>
+ <tr>
+                                                    @endif
+
+                                                 @endforeach
+                                                        </tr>
+                                                 </table>
+                                                </fieldset>
+
+                                            </li>
+                                        </ul>
+
+                                @if ($errors->has('{{colum_name}}'))
+                                    <span class="help-block">
+                                        <strong>{{ $errors->first('{{colum_name}}') }}</strong>
+                                    </span>
+                                @endif
+                            </div>
+                        </div>

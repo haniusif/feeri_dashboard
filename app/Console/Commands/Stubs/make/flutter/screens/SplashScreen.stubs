@@ -1,0 +1,60 @@
+import 'dart:async';
+
+import 'package:flutter/material.dart';
+import 'package:nb_utils/nb_utils.dart';
+import 'package:{{appname}}/screens/WalkThroughScreen.dart';
+import 'package:{{appname}}/colors/Colors.dart';
+
+
+class SplashScreen extends StatefulWidget {
+  static String tag = '/SplashScreen';
+
+  @override
+  _SplashScreenState createState() => _SplashScreenState();
+}
+
+class _SplashScreenState extends State<SplashScreen> with SingleTickerProviderStateMixin {
+  startTime() async {
+    var _duration = Duration(seconds: 3);
+    return Timer(_duration, navigationPage);
+  }
+
+  @override
+  void initState() {
+    super.initState();
+    startTime();
+  }
+
+  void navigationPage() {
+    finish(context);
+    WalkThroughScreen().launch(context);
+  }
+
+  @override
+  void dispose() {
+    super.dispose();
+  }
+
+  Widget build(BuildContext context) {
+    final double width = MediaQuery.of(context).size.width;
+    return Scaffold(
+      // backgroundColor: Colors.white,
+      backgroundColor:  SecondaryColor,
+      body: Center(
+        child: Column(
+          mainAxisAlignment: MainAxisAlignment.center,
+          mainAxisSize: MainAxisSize.max,
+          children: <Widget>[
+            Image.asset('images/logo.png', height: 105),
+            
+            // Container(
+            //   margin: EdgeInsets.only(top: 16),
+            //   child: Text("Rewash", style: secondaryTextStyle(size: 25, color: sdTextPrimaryColor)),
+            // ),
+            
+          ],
+        ),
+      ),
+    );
+  }
+}

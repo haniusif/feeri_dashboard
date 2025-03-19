@@ -1,0 +1,5 @@
+    if(isset($data['{{colum_name}}_from']) &&  isset($data['{{colum_name}}_to']) ){
+                return   $query->whereBetween('{{colum_name}}' , [ $data['{{colum_name}}_from'] , $data['{{colum_name}}_to']] );   
+               }
+
+               

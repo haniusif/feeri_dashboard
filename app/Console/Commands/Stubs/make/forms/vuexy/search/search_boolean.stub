@@ -1,0 +1,15 @@
+
+                                          <div class="col-12 col-sm-6 col-lg-3">
+                                                <label for="{{names}}-list-{{colum_name}}">{{ __('{{names}}_{{colum_name}}') }}</label>
+                                                <fieldset class="form-group">
+                                                    <select  name="{{colum_name}}" class="form-control" id="{{names}}-list-{{colum_name}}">
+
+                                                        <option value="all" @if(request()->{{colum_name}} == 'all') selected @endif >{{ __('All') }}</option>
+                                                        <option value="1" @if(request()->{{colum_name}} == '1') selected @endif >{{ __('YES') }}</option>
+                                                        <option value="0" @if(request()->{{colum_name}} == '0') selected @endif >{{ __('NO') }}</option>
+
+
+
+                                                    </select>
+                                                </fieldset>
+                                            </div>

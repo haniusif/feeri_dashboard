@@ -1,0 +1,8 @@
+
+                                          <div class="col-12 col-sm-6 col-lg-3">
+                                                <label for="{{names}}-list-{{colum_name}}">{{ __('{{names}}_{{colum_name}}') }}</label>
+                                                <fieldset class="form-group">
+                                                    <input class="form-control" name="{{colum_name}}" type="{{type}}" value="{{ request()->{{colum_name}} }}"  />
+
+                                                </fieldset>
+                                            </div>

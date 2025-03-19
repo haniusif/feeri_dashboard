@@ -1,0 +1,7 @@
+    public function show($id,Request $request)
+    {
+   // $this->validate($request, ['id' => 'required|exists:{{names}},id',]);
+
+    ${{name}} = {{UC_name}}::find($id);
+    $next = {{UC_name}}::where('id','>',$id)->min('id');
+    $previous = {{UC_name}}::where('id','<',$id)->max('id');

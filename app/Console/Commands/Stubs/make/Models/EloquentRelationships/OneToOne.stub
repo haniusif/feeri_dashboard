@@ -1,0 +1,11 @@
+    /**
+     * Get the {{function_name}} record associated with the {{this_model}}.
+     */
+    public function {{function_name}}()
+    {
+        return $this->hasOne('{{model_name}}');
+    }
+
+
+    //
+

@@ -1,0 +1,6 @@
+Route::get('{{names}}', 'API\{{controller_name}}APIController@{{names}}');
+Route::get('show_{{name}}', 'API\{{controller_name}}APIController@show_{{name}}');
+Route::post('add_{{name}}', 'API\{{controller_name}}APIController@add_{{name}}');
+Route::put('update_{{name}}', 'API\{{controller_name}}APIController@update_{{name}}');
+Route::delete('delete_{{name}}', 'API\{{controller_name}}APIController@delete_{{name}}');
+ 

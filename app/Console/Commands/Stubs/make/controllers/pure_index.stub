@@ -1,0 +1,11 @@
+
+
+
+    public function index(Request $request)
+    {
+
+        // pure
+         ${{names}} = {{UC_name}}::paginate(10);
+        return view('{{app_name}}.{{names}}.{{names}}' , compact('{{names}}'));
+
+    }

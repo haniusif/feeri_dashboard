@@ -1,0 +1,61 @@
+    public function login(Request $request){
+                 // check_failure
+   $conditions = [
+             'user_name' => 'required|string|exists:users,user_name',
+            'password' => 'required|string|min:6',
+   ] ;
+   $all_request = $request->all();
+   $check_failure =  $this->check_failure($all_request,$conditions);
+   if($check_failure){
+       $this->successStatus = 401;
+      $check_failure =  $this->check_failure($all_request,$conditions);
+       return $check_failure;
+   }
+   // check_failure
+        if(Auth::attempt(['user_name' => request('user_name'), 'password' => request('password')])){
+            $user = Auth::user();
+            $success['token'] =  $user->createToken('MyApp')->accessToken;
+           $success['user_name'] =  $user->user_name;
+           // $success['user_phone'] =  $user->phone;
+            $success['user_id'] =  $user->id;
+                       $lang = 'en';
+          $ResponseMessage =  ($lang=='ar') ?   "arabic msg" : "english msg";
+   $check_success =  $this->check_success($ResponseMessage,$success);
+   return $check_success;
+        }
+        else{
+              $this->successStatus = 401;
+                     $lang = 'en';
+          $ResponseMessage =  ($lang=='ar') ?   "arabic msg" : "english msg";
+   $check_success =  $this->custom_error($ResponseMessage);
+   return $check_success;
+        }
+    }
+    public function register(Request $request)
+    {
+                 // check_failure
+   $conditions = [
+            // 'phone' => 'required|string|size:10|unique:users',
+            'user_name' => 'required|string|max:20|unique:users',
+            'gender_id' => 'required',
+            'password' => 'required|string|min:6|confirmed',
+   ] ;
+   $all_request = $request->all();
+   $check_failure =  $this->check_failure($all_request,$conditions);
+   if($check_failure){
+             $this->successStatus = 401;
+      $check_failure =  $this->check_failure($all_request,$conditions);
+       return $check_failure;
+   }
+   // check_failure
+        $input = $request->all();
+        $input['password'] = bcrypt($input['password']);
+        $user = User::create($input);
+        $success['token'] =  $user->createToken('MyApp')->accessToken;
+        $success['user_name'] =  $user->user_name;
+        $success['user_id'] =  $user->id;
+                $lang = 'en';
+          $ResponseMessage =  ($lang=='ar') ?  "arabic msg" : "english msg";
+   $check_success =  $this->check_success($ResponseMessage,$success);
+   return $check_success;
+    }

@@ -1,0 +1,17 @@
+
+
+
+                        $save = ${{name}}->save();
+
+                        if($save) {
+
+                    $ResponseMessage =  ($lang=='ar') ?  "{{name}} saved successfully" : "{{name}} saved successfully";
+                    $check_success =  $this->check_success($ResponseMessage,${{name}});
+
+                        }else{
+                    $ResponseMessage =  ($lang=='ar') ?  "arabic error msg" : "english error msg";
+                    $check_success =  $this->custom_error($ResponseMessage);
+                        }
+                    return $check_success;
+                        }
+

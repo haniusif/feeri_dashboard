@@ -1,0 +1,209 @@
+{
+  "menu": [
+
+    {
+      "url": "/",
+      "name": "Home",
+      "icon": "menu-icon tf-icons ti ti-home",
+      "slug": "dashboard"
+    },
+    {
+      "url": "/banks",
+      "name": "Banks",
+      "icon": "menu-icon tf-icons ti ti-cube",
+      "slug": "banks.index"
+    },
+    {
+      "url": "/cities",
+      "name": "Cities",
+      "icon": "menu-icon tf-icons ti ti-cube",
+      "slug": "cities.index"
+    },
+    {
+      "url": "/countries",
+      "name": "Countries",
+      "icon": "menu-icon tf-icons ti ti-cube",
+      "slug": "countries.index"
+    },
+    {
+      "url": "/customer_addresses",
+      "name": "Customer Addresses",
+      "icon": "menu-icon tf-icons ti ti-cube",
+      "slug": "customer_addresses.index"
+    },
+    {
+      "url": "/driver_bank_accounts",
+      "name": "Driver Bank Accounts",
+      "icon": "menu-icon tf-icons ti ti-cube",
+      "slug": "driver_bank_accounts.index"
+    },
+    {
+      "url": "/driver_contract_types",
+      "name": "Driver Contract Types",
+      "icon": "menu-icon tf-icons ti ti-cube",
+      "slug": "driver_contract_types.index"
+    },
+    {
+      "url": "/driver_shipments",
+      "name": "Driver Shipments",
+      "icon": "menu-icon tf-icons ti ti-cube",
+      "slug": "driver_shipments.index"
+    },
+    {
+      "url": "/drivers",
+      "name": "Drivers",
+      "icon": "menu-icon tf-icons ti ti-cube",
+      "slug": "drivers.index"
+    },
+    {
+      "url": "/id_types",
+      "name": "Id Types",
+      "icon": "menu-icon tf-icons ti ti-cube",
+      "slug": "id_types.index"
+    },
+    {
+      "url": "/model_has_permissions",
+      "name": "Model Has Permissions",
+      "icon": "menu-icon tf-icons ti ti-cube",
+      "slug": "model_has_permissions.index"
+    },
+    {
+      "url": "/model_has_roles",
+      "name": "Model Has Roles",
+      "icon": "menu-icon tf-icons ti ti-cube",
+      "slug": "model_has_roles.index"
+    },
+    {
+      "url": "/nationalities",
+      "name": "Nationalities",
+      "icon": "menu-icon tf-icons ti ti-cube",
+      "slug": "nationalities.index"
+    },
+    {
+      "url": "/neighbourhoods",
+      "name": "Neighbourhoods",
+      "icon": "menu-icon tf-icons ti ti-cube",
+      "slug": "neighbourhoods.index"
+    },
+    {
+      "url": "/order_activities",
+      "name": "Order Activities",
+      "icon": "menu-icon tf-icons ti ti-cube",
+      "slug": "order_activities.index"
+    },
+    {
+      "url": "/order_messages",
+      "name": "Order Messages",
+      "icon": "menu-icon tf-icons ti ti-cube",
+      "slug": "order_messages.index"
+    },
+    {
+      "url": "/order_packages",
+      "name": "Order Packages",
+      "icon": "menu-icon tf-icons ti ti-cube",
+      "slug": "order_packages.index"
+    },
+    {
+      "url": "/order_statuses",
+      "name": "Order Statuses",
+      "icon": "menu-icon tf-icons ti ti-cube",
+      "slug": "order_statuses.index"
+    },
+    {
+      "url": "/orders",
+      "name": "Orders",
+      "icon": "menu-icon tf-icons ti ti-cube",
+      "slug": "orders.index"
+    },
+    {
+      "url": "/permissions",
+      "name": "Permissions",
+      "icon": "menu-icon tf-icons ti ti-cube",
+      "slug": "permissions.index"
+    },
+    {
+      "url": "/plate_registration_types",
+      "name": "Plate Registration Types",
+      "icon": "menu-icon tf-icons ti ti-cube",
+      "slug": "plate_registration_types.index"
+    },
+    {
+      "url": "/project_statuses",
+      "name": "Project Statuses",
+      "icon": "menu-icon tf-icons ti ti-cube",
+      "slug": "project_statuses.index"
+    },
+    {
+      "url": "/projects",
+      "name": "Projects",
+      "icon": "menu-icon tf-icons ti ti-cube",
+      "slug": "projects.index"
+    },
+    {
+      "url": "/role_has_permissions",
+      "name": "Role Has Permissions",
+      "icon": "menu-icon tf-icons ti ti-cube",
+      "slug": "role_has_permissions.index"
+    },
+    {
+      "url": "/roles",
+      "name": "Roles",
+      "icon": "menu-icon tf-icons ti ti-cube",
+      "slug": "roles.index"
+    },
+    {
+      "url": "/users",
+      "name": "Users",
+      "icon": "menu-icon tf-icons ti ti-cube",
+      "slug": "users.index"
+    },
+    {
+      "url": "/vehicle_colors",
+      "name": "Vehicle Colors",
+      "icon": "menu-icon tf-icons ti ti-cube",
+      "slug": "vehicle_colors.index"
+    },
+    {
+      "url": "/vehicle_handovers",
+      "name": "Vehicle Handovers",
+      "icon": "menu-icon tf-icons ti ti-cube",
+      "slug": "vehicle_handovers.index"
+    },
+    {
+      "url": "/vehicle_manufacturers",
+      "name": "Vehicle Manufacturers",
+      "icon": "menu-icon tf-icons ti ti-cube",
+      "slug": "vehicle_manufacturers.index"
+    },
+    {
+      "url": "/vehicle_models",
+      "name": "Vehicle Models",
+      "icon": "menu-icon tf-icons ti ti-cube",
+      "slug": "vehicle_models.index"
+    },
+    {
+      "url": "/vehicle_statuses",
+      "name": "Vehicle Statuses",
+      "icon": "menu-icon tf-icons ti ti-cube",
+      "slug": "vehicle_statuses.index"
+    },
+    {
+      "url": "/vehicle_suppliers",
+      "name": "Vehicle Suppliers",
+      "icon": "menu-icon tf-icons ti ti-cube",
+      "slug": "vehicle_suppliers.index"
+    },
+    {
+      "url": "/vehicle_types",
+      "name": "Vehicle Types",
+      "icon": "menu-icon tf-icons ti ti-cube",
+      "slug": "vehicle_types.index"
+    },
+    {
+      "url": "/vehicles",
+      "name": "Vehicles",
+      "icon": "menu-icon tf-icons ti ti-home",
+      "slug": "vehicles.index"
+    }
+ ]
+}

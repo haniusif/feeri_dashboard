@@ -1,0 +1,9 @@
+            ;
+
+     }
+
+    public function my_profile()
+    {
+     // ${{name}} = {{UC_name}}::find($id);
+       ${{name}} = Auth::user();
+

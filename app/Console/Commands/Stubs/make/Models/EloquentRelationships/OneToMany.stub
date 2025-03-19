@@ -1,0 +1,12 @@
+
+
+    /**
+     * Get the {{function_name}} for the {{this_model}}.
+     */
+    public function {{function_name}}()
+    {
+        return $this->hasMany('{{model_name}}');
+    }
+
+    //
+

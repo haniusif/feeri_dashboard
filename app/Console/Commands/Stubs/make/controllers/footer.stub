@@ -1,0 +1,30 @@
+
+    $update = ${{name}}->update();
+
+    if ($update) {
+        Session::flash('alert-success', true);
+        Session::flash('message', __('The record has been successfully updated.'));
+    } else {
+        Session::flash('alert-danger', true);
+        Session::flash('message', __('Unable to update the record. Please try again.'));
+    }
+
+    return back();
+}
+
+public function destroy($id)
+{
+    $model = {{UC_name}}::find($id);
+
+    if ($model && $model->delete()) {
+        Session::flash('alert-success', true);
+        Session::flash('message', __('The record has been successfully deleted.'));
+    } else {
+        Session::flash('alert-danger', true);
+        Session::flash('message', __('Failed to delete the record. Please try again.'));
+    }
+
+    return back();
+}
+
+}

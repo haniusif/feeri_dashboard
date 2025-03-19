@@ -1,0 +1,3 @@
+                  if(isset($request->{{input}})) {
+                $conditions['{{input}}'] = 'required|exists:{{REF_TBL_NAME}},{{REF_COL_NAME}}';
+                  }

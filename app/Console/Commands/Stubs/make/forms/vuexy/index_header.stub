@@ -1,0 +1,31 @@
+@extends('layouts.layoutMaster')
+
+@push('style')
+@endpush
+@section('content')
+                <section id="basic-datatable">
+                    <div class="row">
+                        <div class="col-12">
+                            <div class="card">
+                                <div class="card-header">
+                                    <h4 class="card-title">
+                                    </h4>
+                                </div>
+                                <div class="card-content">
+                                    <div class="card-body card-dashboard">
+                                  @if (Session::has('message'))
+                                     <div class="alert alert-primary alert-dismissible fade show" role="alert">
+                                            <p class="mb-0">
+                                                {!! session('message') !!}
+                                            </p>
+                                            <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                                                <span aria-hidden="true">×</span>
+                                            </button>
+                                        </div>
+                                        @endif
+                                        <p class="card-text"></p>
+                                        <div class="table-responsive">
+ <table  id="{{names}}-table" dir="ltr"  class="table  zero-configuration" >
+    <thead>
+        <tr>
+        <th class="text-right">{{ __('action') }}</th>

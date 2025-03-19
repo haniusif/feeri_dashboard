@@ -1,0 +1,20 @@
+
+
+             //////////////////////////////////{{names}}/////////////////////////////////
+
+
+                    public function {{names}}(Request $request)
+                    {
+                    if(isset($request->lang)) {
+                        $lang = ($request->lang == 'ar') ? 'ar' : 'en';
+                    }else{
+                        $lang = '{{lang}}';
+                    }
+                        App::setLocale($lang);
+
+
+                    ${{names}} = {{UC_name}}::select('{{names}}.*')->get();
+
+                    $ResponseMessage =  ($lang=='ar') ?  "{{names}} retrieved successfully" : "{{names}} retrieved successfully";
+                    $check_success =  $this->check_success($ResponseMessage,${{names}});
+                    return $check_success;

@@ -1,0 +1,23 @@
+@extends('layouts/layoutMaster')
+
+@section('title', __("{{$name}}"))
+
+@section('vendor-style')
+{{--  your vendor style files goes here --}}
+@endsection
+
+@section('page-style')
+{{--  your page specific style files goes here --}}
+@endsection
+
+@section('vendor-script')
+{{--  your vendor script files goes here --}}
+@endsection
+
+@section('page-script')
+{{--  your page specific script files goes here --}}
+@endsection
+
+@section('content')
+{{--  your page content goes here --}}
+@endsection

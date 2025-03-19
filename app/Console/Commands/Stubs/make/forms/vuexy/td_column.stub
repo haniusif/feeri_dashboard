@@ -1,0 +1,2 @@
+
+<td >{{ ${{name}}->{{colum_name}} }}</td>

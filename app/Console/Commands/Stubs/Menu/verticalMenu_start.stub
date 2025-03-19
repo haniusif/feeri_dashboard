@@ -1,0 +1,9 @@
+{
+  "menu": [
+
+    {
+      "url": "/",
+      "name": "Home",
+      "icon": "menu-icon tf-icons ti ti-home",
+      "slug": "dashboard"
+    },

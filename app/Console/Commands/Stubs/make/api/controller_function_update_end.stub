@@ -1,0 +1,15 @@
+
+
+      //  $columns = DB::getSchemaBuilder()->getColumnListing('{{names}}');
+       // foreach($request->all() as $key => $value){
+      // if(in_array($key,$columns)){
+        // ${{name}}->$key = $value;
+      // }
+      //  }
+                  ${{name}}->update();
+                    $ResponseMessage =  ($lang=='ar') ?  "{{name}} updated successfully" : "{{name}} updated successfully";
+                    $check_success =  $this->check_success($ResponseMessage,${{name}});
+
+                    return $check_success;
+
+               }

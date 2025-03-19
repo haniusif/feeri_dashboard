@@ -1,0 +1,31 @@
+import 'package:flutter/material.dart';
+
+// const sdTextPrimaryColor = Color(0xFF000000);
+const TextPrimaryColor = Color.fromRGBO(23, 90, 125, 1) ;
+
+const TextSecondaryColor = Color(0xFF757575);
+
+// 175A7D
+// rgb(23, 90, 125)
+// rgba(23, 90, 125, 1)
+
+// 55BFCA
+// rgb(85, 191, 202)
+// rgba(85, 191, 202, 1)
+
+// const sdPrimaryColor = Color(0xFF3281FF);
+
+const PrimaryColor = Color.fromRGBO(85,191,202, 1) ;
+const SecondaryColor = Color.fromRGBO(23, 90, 125, 1) ;
+const SecondaryColorRed = Color(0xFFFF5C5C);
+const SecondaryColorYellow = Color(0xFFFFA635);
+const SecondaryColorGreen = Color(0xFF5DE094);
+const IconColor = Color(0xFFA6A7AA);
+const ShadowColor = Color(0x95E9EBF0);
+const AppBackground = Color(0xFFf8f8f8);
+const ViewColor = Color(0xFFDADADA);
+
+
+const White = Color(0XFFFFFFFF);
+
+ 

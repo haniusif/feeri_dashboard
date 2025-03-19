@@ -1,0 +1,4 @@
+       return view('{{app_name}}.{{names}}.{{name}}_view')
+        ->with('{{name}}',${{name}})
+        ->with('next',$next)
+        ->with('previous',$previous)

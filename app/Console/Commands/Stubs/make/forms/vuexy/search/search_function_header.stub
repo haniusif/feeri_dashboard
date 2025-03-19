@@ -1,0 +1,8 @@
+   
+   $data = $request->all();
+
+
+  ${{names}} = {{UC_name}}::orderby('id','DESC')
+
+  ->where(function ($query) use ($data) {
+

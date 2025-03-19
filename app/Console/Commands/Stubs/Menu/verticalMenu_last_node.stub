@@ -1,0 +1,6 @@
+    {
+      "url": "/{{names}}",
+      "name": "{{menu_names}}",
+      "icon": "menu-icon tf-icons ti ti-home",
+      "slug": "{{names}}.index"
+    }

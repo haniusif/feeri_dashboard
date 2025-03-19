@@ -1,0 +1,17 @@
+
+ <div class="form-group">
+                            <div class="col-md-6 col-md-offset-2">
+                                <button type="submit" class="btn btn-primary pull-left">
+                                    <i class="fa fa-btn fa-save"></i>@lang('messages.update')
+                                </button>
+
+
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+              </div>
+              </div>
+              </div>
+@endsection

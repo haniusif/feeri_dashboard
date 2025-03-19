@@ -1,0 +1,9 @@
+ <div class=" mt-3">
+                                                <button type="submit" class="btn btn-info" >{{ __('Find') }}</button>
+                                                <a href="{{ route('{{names}}.index') }}" class="btn btn-link" >{{ __('Reset') }}</a>
+                                            </div>
+            </div>
+                                    </form>
+                                </div>
+                            </div>
+                              </div>

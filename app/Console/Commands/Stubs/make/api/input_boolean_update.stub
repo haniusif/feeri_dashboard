@@ -1,0 +1,1 @@
+  ${{name}}->{{input}} = ($request->{{input}}) ? $request->{{input}} : 0;

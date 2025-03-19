@@ -1,0 +1,18 @@
+
+
+
+                    public function update_{{name}}(Request $request)
+                    {
+
+                    if(isset($request->lang)) {
+                        $lang = ($request->lang == 'ar') ? 'ar' : 'en';
+                    }else{
+                        $lang = '{{lang}}';
+                    }
+                        App::setLocale($lang);
+
+                        
+                    ${{parm_id}} =  $request->{{parm_id}};
+                    
+
+

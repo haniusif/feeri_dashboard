@@ -1,0 +1,2 @@
+Route::get('login', 'API\UserAPIController@login');
+Route::get('register', 'API\UserAPIController@register');

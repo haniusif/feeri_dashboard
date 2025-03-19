@@ -1,0 +1,29 @@
+ 
+
+
+
+           <div class="col-12 mb-3">
+                                                        <div class="form-group row">
+                                                            <div class="col-md-4">
+                                                                <span>{{ __('{{names}}_{{colum_name}}') }}</span>
+                                                            </div>
+                                                            <div class="col-md-8">
+                                                                <div class="position-relative has-icon-left">
+                                                                    <input  data-toggle="popover" value="{{  old('{{colum_name}}')   }}" data-placement="left"  data-content="{{ __('{{names}}_{{colum_name}}_data-content') }}" data-trigger="hover"  data-original-title="{{ __('{{names}}_{{colum_name}}_data-original-title') }}" 
+                                                                     type="{{type}}"   class="form-control {{ $errors->has('{{colum_name}}') ? 'is-invalid' : '' }}" name="{{colum_name}}" placeholder="{{ __('{{names}}_{{colum_name}}') }}" data-validation-required-message="{{ __('This field is required') }}" >
+                                                                    <div class="form-control-position">
+                                                                        <i class="feather icon-file-minus"></i>
+                                                                    </div>
+
+                                                                    @if ($errors->has('{{colum_name}}'))
+                                                                    <div class="invalid-feedback">
+                                                                    {{ $errors->first('{{colum_name}}') }}
+                                                </div>
+                                                @endif
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div> 
+                                                    
+
+     

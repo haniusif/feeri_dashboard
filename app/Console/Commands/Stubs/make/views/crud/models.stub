@@ -1,0 +1,49 @@
+@extends('layouts.layoutMaster')
+
+@section('content')
+
+<div class="container text-right">
+    <div class="row">
+
+            <div class="panel panel-default">
+                <div class="panel-heading"><a href="/{{names}}/create" class="pull-left"><i class="fa fa-plus fa-lg"></i></a>{{names}}</div>
+
+                <div class="panel-body">
+                            @if (Session::has('message'))
+                             <div class="alert alert-info">
+  <strong>!</strong>   {!! session('message') !!}
+</div>
+
+                                 @endif
+                <table  class="table ">
+                  <tr>
+
+                    <th colspan="2" class="text-center">option</th>
+                    <th class="text-right">{{name}}_name</th>
+                    <th class="text-right">#</th>
+                  </tr>
+                   @foreach(${{names}} as ${{name}})
+                  <tr>
+                    <td> <form action="/{{names}}/{{${{name}}->id}}" method="post">
+                     {{ method_field('DELETE') }}  {{ csrf_field() }}
+                      <button class="btn btn-danger" type="submit" >delete</button> </form></td>
+                    <td class="text-left" ><a class="btn btn-success" href="/{{names}}/{{${{name}}->id}}">view</a></td>
+
+
+                    <td>{{${{name}}->name}}</td>
+                    <td>{{${{name}}->id}}</td>
+                  </tr>
+                    @endforeach
+                </table>
+
+
+                </div>
+            </div>
+
+    </div>
+</div>
+
+
+
+
+@endsection

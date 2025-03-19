@@ -1,0 +1,15 @@
+
+
+    $save = ${{name}}->save();
+
+if ($save) {
+    Session::flash('alert-success-link', true);
+    Session::flash('alert-link', route('{{names}}.show', ${{name}}->id));
+    Session::flash('message', __('The record has been successfully added. You can view it here.'));
+} else {
+    Session::flash('alert-danger', true);
+    Session::flash('message', __('An error occurred while saving the record. Please try again later.'));
+}
+
+return back();
+}

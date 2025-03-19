@@ -1,0 +1,6 @@
+ 
+  if(isset($data['{{colum_name}}']) &&  $data['{{colum_name}}'] != null ){
+                   $query->where('{{colum_name}}' , 'like'  , '%' .$data['{{colum_name}}']. '%' );   
+               }
+
+               

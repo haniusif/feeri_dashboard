@@ -1,0 +1,12 @@
+        
+          $all_request = $request->all();
+   $check_failure =  $this->check_failure($all_request,$conditions);
+   if($check_failure){
+       return $check_failure;
+   }
+   // check_failure
+
+        ${{name}} = {{UC_name}}::find(${{parm_id}});
+
+                    // update
+    

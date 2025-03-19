@@ -1,0 +1,1 @@
+use App\Models\{{app_name}}\{{name}};

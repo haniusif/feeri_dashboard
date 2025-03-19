@@ -1,0 +1,25 @@
+
+
+
+<div class="col-12 mb-3">
+  <div class="form-group row">
+    <div class="col-md-4">
+      <span>{{ __('{{names}}_{{colum_name}}') }}</span>
+    </div>
+    <div class="col-md-8">
+      <label class="switch">
+        <input name="{{colum_name}}" value="1" @checked(${{name}}->{{colum_name}} == 1) type="checkbox" id="{{colum_name}}" class="switch-input">
+        <span class="switch-toggle-slider">
+          <span class="switch-on"></span>
+          <span class="switch-off"></span>
+        </span>
+        <span class="switch-label"></span>
+      </label>
+      @if ($errors->has('{{colum_name}}'))
+      <div class="invalid-feedback">
+        {{ $errors->first('{{colum_name}}') }}
+      </div>
+      @endif
+    </div>
+  </div>
+</div>

@@ -1,0 +1,6 @@
+ <div class="col-12">
+<div class="card mb-4">
+  <div class="card-body">
+    <h4 class="card-title">{{ __('Filters') }}</h4>
+                <form action="{{ route('{{names}}.index') }}" method="GET">
+                    <div class="row">

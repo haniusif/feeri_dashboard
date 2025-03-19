@@ -1,0 +1,5 @@
+       </tr>
+    </thead>
+    <tfoot>
+        <tr>
+        <th >{{ __('Action') }}</th>

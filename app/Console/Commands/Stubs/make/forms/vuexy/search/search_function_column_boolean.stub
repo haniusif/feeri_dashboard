@@ -1,0 +1,4 @@
+      if(isset($data['{{colum_name}}']) && $data['{{colum_name}}'] != 'all' ){
+            
+                 $query->where('{{colum_name}}' , $data['{{colum_name}}']);   
+            }

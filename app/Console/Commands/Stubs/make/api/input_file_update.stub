@@ -1,0 +1,12 @@
+  if(isset($request->{{input}})) {
+  if ($request->hasFile('{{input}}')) {
+  if ($request->file('{{input}}')->isValid()) {
+  $file = $request->file('{{input}}');
+  $destinationPath = 'images/{{names}}';
+  $fileName = rand(11111,99999).'_file.'.$file->getClientOriginalExtension(); // renameing image
+  $file->move($destinationPath,$fileName);
+  ${{name}}->{{input}} = '/'.$destinationPath."/".$fileName;
+
+      }}
+
+      }
